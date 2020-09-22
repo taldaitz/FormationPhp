@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+
+    <h1>Inscription</h1>
+
+    <form action="resultat.php" method="POST" enctype="multipart/form-data">
+
+        <p><label>Nom : </label><input type="text" name="nom"></p>
+        <p><label>Prénom : </label><input type="text" name="prenom"></p>
+        <p><label>Mail : </label><input type="email" name="email"></p>
+        <p>
+            <label>Poste : </label>
+            <select name="poste">
+                <option value="0">Selectionnez le poste souhaité</option>
+                <option>Developpeur</option>
+                <option>Professeur</option>
+                <option>Responsable informatique</option>
+                <option>Plombier</option>
+            </select>
+        </p>
+
+        <p>
+            <label>Couleur : </label>
+            <select name="couleur">
+                <option value="0">Selectionnez la couleur</option>
+                <option>Bleu</option>
+                <option>Jaune</option>
+            </select>
+        </p>
+
+        <p>
+            <label>CV : </label>
+            <input type="file" name="cv">
+        </p>
+
+        <p>
+            <input type="submit" value="Postuler">
+        </p>
+
+    </form>
+    
+</body>
+</html>
