@@ -1,5 +1,10 @@
 <?php
 
+    if(!empty($_GET['error'])) {
+        if($_GET['error'] == 2)
+            echo "Problème de mot de passe";
+    }
+
     $numero = 0;
     if(!empty($_GET['numero'])) {
         $numero = $_GET['numero'];

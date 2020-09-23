@@ -3,7 +3,7 @@
 
     if(isset($_GET['reset'])) {
         session_destroy();
-        header('Location: index_session.php');
+        header('Location: index_session.php?error=2');
     }
 
     if(!isset($_SESSION['nbClicks']))
