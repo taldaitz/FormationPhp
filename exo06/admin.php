@@ -5,7 +5,7 @@
             $login = $_POST['login'];
             $password = $_POST['password'];
 
-            if($password != 'admin' && $login != 'admin') {
+            if(!($password == 'admin' && $login == 'admin')) {
                 header('Location: login.php?error=2');
                 die(); 
             } 
