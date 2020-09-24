@@ -4,6 +4,8 @@ $tableau = array('a', 'b', 'c', 'd');
 
 $raccourci = ['a', 'b', 'c', 'd']; // > Php 7.0
 
+$tabVide = [];
+
 $tab = [
     'toto' => 1,
     'titi' => 5.9,

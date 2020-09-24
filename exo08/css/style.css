@@ -1,0 +1,16 @@
+.date {
+    font-style: italic;
+    text-align: right;
+}
+
+.article {
+    border: 5px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+.article img {
+    max-width: 80px;
+    max-height: 60px;
+}
