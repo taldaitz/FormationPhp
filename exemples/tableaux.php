@@ -5,6 +5,15 @@ $tableau = array('a', 'b', 'c', 'd');
 $raccourci = ['a', 'b', 'c', 'd']; // > Php 7.0
 
 $tabVide = [];
+$tabVide[] = 1;
+$tabVide[] = 2;
+$tabVide[] = 3;
+
+/*
+$tabVide[0] == 1
+$tabVide[1] == 2
+$tabVide[2] == 3
+*/
 
 $tab = [
     'toto' => 1,
