@@ -45,3 +45,10 @@ foreach($tableau as $cle => $case) {
     echo '<br>';
     echo $cle . ' - ' . $case;
 }
+
+
+$auteurs = [];
+
+$auteurs[] = ['toto', 'titi', 'tata'];
+
+$auteurs[0]['nom'] = 'tutu';
