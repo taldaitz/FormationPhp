@@ -1,7 +1,8 @@
 <?php
 
 include('fonctions.php');
-$auteurs = recupererAuteurs();
+//$auteurs = recupererAuteurs(); - simple mais trop couteux en requête
+$auteurs = recupererAuteursOPTI();
 
 ?>
 <!DOCTYPE html>

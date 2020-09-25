@@ -11,6 +11,7 @@
             } 
 
             $_SESSION['user'] = 'admin';
+            setcookie('estAdmin', true, time() + 600);
 
         }
         else {

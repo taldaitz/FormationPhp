@@ -23,6 +23,36 @@ function recupererAuteurs() {
     return $auteurs;
 }
 
+function recupererAuteursOPTI() {
+    $auteurs = [];
+    $db = ouvrirConnection();
+
+    $sql = "SELECT auteur.id as aid, nom, prenom, COUNT(livre.id) 
+            FROM auteur LEFT JOIN livre ON auteur.id = livre.auteur_id
+            GROUP BY auteur.id, nom, prenom
+            ORDER BY COUNT(livre.id) DESC";
+    $result = requeteSelect($db, $sql);
+
+    while($auteur = mysqli_fetch_array($result)) {
+        $auteurs[$auteur['aid']] = [
+            'nom' => $auteur['nom'],
+            'prenom' => $auteur['prenom'],
+            'livres' => [],
+        ];
+    }
+
+    $sqlLivres = "SELECT id, titre, auteur_id FROM livre";
+    $resultLivres = requeteSelect($db, $sqlLivres);
+
+    while($livre = mysqli_fetch_array($resultLivres)) {
+        $auteurs[$livre['auteur_id']]['livres'][] = $livre;
+    }
+
+    fermerConnection($db);
+
+    return $auteurs;
+}
+
 function recupererLivresParAuteur($auteurId) {
     $livres = [];
     $db = ouvrirConnection();
